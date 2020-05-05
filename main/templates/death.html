@@ -1,0 +1,44 @@
+<html id="wrapper">
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            #wrapper{
+                background-color: black;
+                min-width: 1900px;
+                color: rgb(0, 243, 0);
+                display: inline-block;
+                font-family: 'Press Start 2P', cursive;
+            }
+            button {
+            padding: 15px;
+            font-size: 15px;
+            font-family: 'Press Start 2P', cursive;
+            border-radius: 5px;
+            color: rgb(0,243,0);
+            background-color: black;
+            border-color: rgb(0,243,0);
+            margin: 0;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            
+        }
+        h1{
+            color:red;
+            font-size: 50px;
+        }
+        </style>
+    </head>
+    <h1 style="text-align: center;" >You have died.</h1>
+    {% if death == 1 %}
+    <h2 style="text-align: center;">"You were found under a pile of rubble. Maybe grow a spine next time."</h2>
+    {% endif %}
+    {% if death == 2 %}
+    <h2 style="text-align: center;">You were caught stealing and got sentenced to hanging.</h2>
+    {% endif %}
+        <form action='/'>
+        <button>Try Again</button>
+    </form>
+</html>
